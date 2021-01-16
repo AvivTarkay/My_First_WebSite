@@ -1,0 +1,344 @@
+* {
+	box-sizing: border-box;
+}
+
+body {
+	margin: 0;
+	font-family: "Dosis", sans-serif;
+}
+
+/*Declare Grid*/
+.grid-container {
+	display: grid;
+	grid-template-columns: 50% 50%;
+}
+/*Adjust Content*/
+.grid-container > div {
+	height: 100vh;
+	justify-content: end;
+}
+
+/*Left-Side Img*/
+.left {
+	background: url(photo/רקע\ עליון.jpg);
+}
+/*Right-Side Img*/
+.right {
+	background: url(photo/me.jpg) center/cover;
+}
+
+/*Main Title*/
+#main h1 {
+	position: fixed;
+	top: 60%;
+	left: 17%;
+	color: white;
+	font-size: 40px;
+	font-weight: lighter;
+	letter-spacing: 3px;
+}
+/*Secound Title*/
+#main h2 {
+	position: fixed;
+	top: 67%;
+	left: 19%;
+	color: white;
+	font-size: 27px;
+	font-weight: lighter;
+	letter-spacing: 2px;
+}
+/*About Me Paragraph*/
+p {
+	position: fixed;
+	margin: 0;
+	color: white;
+	text-align: justify;
+	top: 75%;
+	width: 20%;
+	left: 14%;
+}
+
+/*Btns Start*/
+.btns {
+	position: fixed;
+	top: 87%;
+	left: 10%;
+}
+
+.btns > a {
+	position: relative;
+	display: inline-block;
+	bottom: 20px;
+	left: 15px;
+	padding: 5px;
+	margin: 10px;
+	/* width: 20%; */
+	color: white;
+	font-size: 22px;
+	text-decoration: none;
+	text-transform: uppercase;
+	transition: 0.2s;
+	text-align: center;
+	letter-spacing: 3px;
+	overflow: hidden;
+}
+.btns > a:hover {
+	color: black;
+	background: #fff3b0;
+	box-shadow: 0 0 10px #fcbf49, 0 0 410px lightslategray,
+		0 0 80px lightslategray;
+	transition-delay: 0.3s;
+}
+.btns > a > span {
+	position: absolute;
+	display: block;
+}
+.btns > a > span:nth-child(1) {
+	top: 0;
+	left: -100%;
+	width: 100%;
+	height: 2px;
+	background: linear-gradient(90deg, transparent, #f77f00);
+}
+.btns > a:hover > span:nth-child(1) {
+	left: 100%;
+	transition: 1s;
+}
+.btns > a > span:nth-child(3) {
+	bottom: 0px;
+	right: -100%;
+	width: 100%;
+	height: 2px;
+	background: linear-gradient(270deg, transparent, #f77f00);
+}
+.btns > a:hover > span:nth-child(3) {
+	right: 100%;
+	transition: 1s;
+	transition-delay: 0.5s;
+}
+.btns > a > span:nth-child(2) {
+	top: -100%;
+	right: 0;
+	width: 4px;
+	height: 100%;
+	background: linear-gradient(180deg, transparent, #f77f00);
+}
+.btns > a:hover > span:nth-child(2) {
+	top: 100%;
+	transition: 1s;
+	transition-delay: 0.25s;
+}
+.btns > a > span:nth-child(4) {
+	bottom: -100px;
+	left: 0;
+	width: 4px;
+	height: 100px;
+	background: linear-gradient(360deg, transparent, #f77f00);
+}
+.btns > a:hover > span:nth-child(4) {
+	bottom: 100%;
+	transition: 1s;
+	transition-delay: 0.75s;
+}
+/*Btns End*/
+
+/*Social-Row Start*/
+#socialrow {
+	position: fixed;
+	transform: translate(-50%, -50%);
+	top: 96%;
+	left: 24%;
+}
+#socialrow > a {
+	position: relative;
+	display: inline-block;
+	margin: 0 4px;
+	width: 40px;
+	height: 40px;
+	line-height: 40px;
+	border-radius: 50%;
+	background: #171515;
+	font-size: 23px;
+	text-align: center;
+	color: white;
+	transition: 0.5s;
+}
+
+#socialrow > a:before {
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	border-radius: 50%;
+	background: #fcbf49;
+	transition: 0.5s;
+	transform: scale(0.9);
+	z-index: -1;
+}
+#socialrow > a:hover:before {
+	transform: scale(1.2);
+	box-shadow: 0 0 15px #fcbf49;
+	filter: blur(3p);
+}
+#socialrow > a:hover {
+	color: #fcbf49;
+	box-shadow: 0 0 15px #fcbf49;
+	text-shadow: 0 0 15px #fcbf49;
+}
+/*Social-Row End*/
+
+/*Logo Img Adjust*/
+.logo > img {
+	position: relative;
+	margin-top: 2%;
+	right: -89%;
+	width: 10%;
+	height: 10%;
+}
+
+/*Media-Query Start*/
+@media screen and (max-width: 940px) {
+	#main h1 {
+		position: fixed;
+		top: 48%;
+		left: 14%;
+	}
+	#main h2 {
+		position: fixed;
+		top: 55%;
+		left: 16%;
+	}
+	#main p {
+		position: fixed;
+		text-align: justify;
+		left: 9%;
+		top: 64%;
+		width: 300px;
+	}
+	.btns a {
+		display: block;
+		position: relative;
+		left: 35%;
+		top: -105px;
+	}
+	#socialrow a {
+		position: relative;
+		left: -3%;
+		bottom: -5%;
+	}
+}
+
+@media screen and (max-width: 600px) {
+	.grid-container {
+		height: auto;
+		width: 100%;
+		max-width: 100%;
+		grid-template-columns: 1fr;
+	}
+	#main h1 {
+		position: fixed;
+		top: 48%;
+		left: 31%;
+	}
+	#main h2 {
+		position: fixed;
+		top: 55%;
+		left: 34%;
+	}
+	#main p {
+		position: fixed;
+		text-align: justify;
+		left: 21%;
+		top: 64%;
+		width: 300px;
+	}
+	.btns a {
+		display: block;
+		position: relative;
+		left: 85%;
+		top: -100px;
+	}
+	#socialrow a {
+		position: relative;
+		left: 63%;
+	}
+}
+
+@media screen and (max-width: 400px) {
+	.grid-container {
+		height: auto;
+		width: 100%;
+		max-width: 100%;
+		grid-template-columns: 1fr;
+	}
+	#main h1 {
+		position: fixed;
+		justify-content: center;
+		top: 48%;
+		left: 25%;
+	}
+	#main h2 {
+		position: fixed;
+		top: 55%;
+		justify-content: center;
+		left: 30%;
+	}
+	#main p {
+		position: fixed;
+		text-align: justify;
+		justify-content: center;
+		left: 10%;
+		top: 64%;
+		width: 300px;
+	}
+	.btns a {
+		display: block;
+		position: relative;
+		left: 50%;
+		top: -100px;
+	}
+	#socialrow a {
+		position: relative;
+		left: 50%;
+	}
+}
+@media screen and (max-width: 299px) {
+	.grid-container {
+		height: auto;
+		width: 100%;
+		max-width: 100%;
+		grid-template-columns: 1fr;
+	}
+	#main h1 {
+		position: fixed;
+		justify-content: center;
+		top: 48%;
+		left: 15%;
+	}
+	#main h2 {
+		position: fixed;
+		top: 55%;
+		justify-content: center;
+		left: 24%;
+	}
+	#main p {
+		position: fixed;
+		text-align: justify;
+		justify-content: center;
+		left: 0;
+		top: 64%;
+		width: 300px;
+	}
+	.btns a {
+		display: block;
+		position: relative;
+		left: 25%;
+		top: -100px;
+	}
+	#socialrow a {
+		position: relative;
+		left: 35%;
+	}
+}

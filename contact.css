@@ -1,0 +1,571 @@
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	font-weight: lighter;
+	font-family: "Dosis", sans-serif;
+	background-color: #202122;
+}
+/*Declare Grid*/
+.port-container {
+	display: grid;
+	grid-template-columns: auto;
+	grid-template-rows: auto auto auto auto;
+	background-color: blue;
+	padding: 0;
+}
+/*content Adjust*/
+.port-container > div {
+	background-color: #202122;
+	padding: 20px 0;
+	font-size: 20px;
+}
+
+/*Item1 START*/
+.item1 {
+	text-align: center;
+}
+.item1 hr {
+	position: relative;
+	left: 13%;
+	top: 35px;
+	width: 71%;
+}
+h1 {
+	color: white;
+	font-size: 70px;
+	letter-spacing: 20px;
+	font-weight: lighter;
+	text-transform: uppercase;
+}
+h2 {
+	color: white;
+	font-size: 30px;
+	letter-spacing: 5px;
+}
+.nav ul li {
+	position: relative;
+	top: 20px;
+	float: left;
+	margin: 0 30px;
+	list-style: none;
+	left: 34%;
+}
+ul li a {
+	text-decoration: none;
+	color: white;
+}
+ul li a:hover {
+	opacity: 0.4;
+	color: silver;
+}
+/*Item1 End*/
+
+/*Item2 START*/
+.item2 > img {
+	object-fit: cover;
+	position: relative;
+	display: block;
+	top: 20px;
+	left: 13%;
+	width: 71%;
+	height: 300px;
+}
+.item2 hr {
+	position: relative;
+	left: 13%;
+	top: 50px;
+	width: 71%;
+}
+/* Item2 END*/
+
+/*Item3 START*/
+
+/*contact section start*/
+#contact {
+	position: relative;
+	left: 20%;
+	top: 140px;
+	width: 60%;
+	height: fit-content;
+	background-color: #202122;
+	overflow: hidden;
+	padding-bottom: 300px;
+}
+.section-header {
+	text-align: center;
+	margin: 0 auto;
+	padding-top: 50px;
+	letter-spacing: 6px;
+	color: #fff;
+	margin-bottom: 25px;
+}
+.contact-wrapper {
+	margin: 0 auto;
+	padding-top: 20px;
+	position: relative;
+	width: 800px;
+	height: auto;
+}
+/*Contact-Section End*/
+
+/* Begin Left Contact Page */
+.form-horizontal {
+	float: left;
+	width: 400px;
+	font-weight: 400;
+}
+
+.form-control {
+	width: 390px;
+	background-color: black;
+	margin: 3px;
+	border-radius: 5px;
+	color: #fff;
+	letter-spacing: 1px;
+	border-color: #fff;
+}
+
+textarea {
+	height: 200px;
+}
+input[type="text"],
+input[type="email"] {
+	height: 35px;
+}
+
+.send-button {
+	background-color: turquoise;
+	margin-top: 15px;
+	height: 50px;
+	border-radius: 5px;
+	width: 400px;
+}
+.send-text {
+	display: block;
+	letter-spacing: 2px;
+	margin-top: 10px;
+	font: 300 14px "Lato", sans-serif;
+}
+.button {
+	width: 400px;
+	height: 34px;
+}
+
+.button:hover {
+	opacity: 0.5;
+}
+h3 {
+	margin: 25px;
+	font-weight: lighter;
+	text-align: center;
+	color: #fff;
+}
+/* Begin Right Contact Page */
+.direct-contact-container {
+	/* max-width: 400px; */
+	float: right;
+	margin-top: 5px;
+}
+
+/* Location, Phone, Email Section */
+.contact-list {
+	list-style-type: none;
+	margin-left: -30px;
+	padding-right: 20px;
+}
+
+.list-item {
+	line-height: 4;
+	color: #aaa;
+}
+
+.contact-text {
+	font: 300 18px "Lato", sans-serif;
+	letter-spacing: 1.9px;
+	color: #bbb;
+}
+
+.place {
+	margin-left: 62px;
+}
+
+.phone {
+	margin-left: 56px;
+}
+
+.gmail {
+	margin-left: 53px;
+}
+
+.contact-text a {
+	color: #bbb;
+	text-decoration: none;
+	transition-duration: 0.2s;
+}
+
+.contact-text a:hover {
+	color: #fff;
+	text-decoration: none;
+}
+
+/* Social Media Icons */
+.social-media-list {
+	position: relative;
+	font-size: 2.3rem;
+	text-align: center;
+	width: 100%;
+}
+
+.social-media-list li a {
+	color: #fff;
+}
+
+.social-media-list li {
+	position: relative;
+	top: 0;
+	left: -20px;
+	display: inline-block;
+	height: 70px;
+	width: 70px;
+	margin: 10px auto;
+	line-height: 70px;
+	border-radius: 50%;
+	color: #fff;
+	background-color: rgb(27, 27, 27);
+	cursor: pointer;
+	transition: all 0.2s ease-in-out;
+}
+
+.social-media-list li:after {
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 70px;
+	height: 70px;
+	line-height: 70px;
+	border-radius: 50%;
+	opacity: 0;
+	box-shadow: 0 0 0 1px #fff;
+	transition: all 0.2s ease-in-out;
+}
+
+.social-media-list li:hover {
+	background-color: #fff;
+}
+
+.social-media-list li:hover:after {
+	opacity: 1;
+	transform: scale(1.12);
+	transition-timing-function: cubic-bezier(0.37, 0.74, 0.15, 1.65);
+}
+
+.social-media-list li:hover a {
+	color: #111;
+}
+/*Item3 END*/
+
+/*Item4 START*/
+.item4 {
+	z-index: 1;
+	color: white;
+	text-align: center;
+}
+.item4 .subscribe {
+	position: relative;
+	top: 50px;
+	margin-bottom: 5%;
+}
+.subscribe p {
+	position: relative;
+	margin-bottom: 10px;
+}
+.subscribe h1 {
+	position: relative;
+}
+.sign-up [type="text"] {
+	margin: 5px;
+	border-radius: 4px;
+	height: 45px;
+	text-align: center;
+}
+.sign-up p {
+	position: relative;
+	margin-top: 5px;
+}
+button {
+	width: 100px;
+	height: 45px;
+	border: 1px white solid;
+	border-radius: 2px;
+	color: white;
+	background-color: black;
+}
+.sign-up {
+	position: relative;
+}
+.item4 h1 {
+	font-size: 20px;
+}
+.item4 p {
+	font-size: 15px;
+}
+.item4 hr {
+	position: relative;
+	left: 15%;
+	width: 71%;
+}
+
+/* Begin Media Queries*/
+@media screen and (max-width: 760px) {
+	.port-container {
+		justify-content: center;
+	}
+	.port-container item1 {
+		height: 100vh;
+		width: auto;
+		position: relative;
+		left: 50%;
+		margin: 0;
+		padding: 0;
+	}
+	#contact {
+		position: relative;
+		height: 100%;
+		width: 100%;
+		visibility: visible;
+		left: 15%;
+	}
+	.section-header {
+		position: relative;
+		right: 4%;
+		font-size: 40px;
+	}
+	.direct-contact-container,
+	.form-horizontal {
+		float: none;
+		margin: 10px auto;
+	}
+	.direct-contact-container {
+		margin-top: 60px;
+		max-width: 300px;
+	}
+	.social-media-list li {
+		height: 60px;
+		width: 60px;
+		line-height: 60px;
+	}
+	.social-media-list li:after {
+		width: 60px;
+		height: 60px;
+		line-height: 60px;
+	}
+}
+
+@media screen and (max-width: 569px) {
+	.port-container {
+		justify-content: center;
+	}
+	.port-container item1 {
+		height: 100vh;
+		width: auto;
+		position: relative;
+		left: 50%;
+		margin: 0;
+		padding: 0;
+	}
+	#contact {
+		height: 100%;
+		width: auto;
+	}
+	.section-header {
+		font-size: 50px;
+	}
+	.direct-contact-container,
+	.form-wrapper {
+		float: none;
+		margin: 0 auto;
+	}
+	.form-control,
+	textarea {
+		max-width: 340px;
+		margin: 0 auto;
+	}
+
+	.name,
+	.email,
+	textarea {
+		width: 280px;
+	}
+	.direct-contact-container {
+		margin-top: 60px;
+		max-width: 280px;
+	}
+	.social-media-list {
+		left: 0;
+	}
+	.social-media-list li {
+		height: 55px;
+		width: 55px;
+		line-height: 55px;
+		font-size: 2rem;
+	}
+	.social-media-list li:after {
+		width: 55px;
+		height: 55px;
+		line-height: 55px;
+	}
+	.send-button {
+		width: 85%;
+	}
+}
+
+@media screen and (max-width: 410px) {
+	/* .social-media-list {
+    left: 60px;
+    height: 50vh;
+  } */
+	.port-container {
+		justify-content: center;
+	}
+	.send-button {
+		width: 85%;
+	}
+}
+@media screen and (max-width: 940px) {
+	.port-container {
+		justify-content: center;
+	}
+	.port-container item1 {
+		height: 100vh;
+		width: auto;
+		position: relative;
+		left: 50%;
+		margin: 0;
+		padding: 0;
+	}
+	.port-container .item1 h1,
+	.port-container .item1 h2 {
+		position: relative;
+	}
+	.port-container ul li a {
+		position: relative;
+		right: 100px;
+	}
+
+	#contact {
+		height: 100%;
+		width: 100%;
+	}
+	#contact h3 {
+		position: relative;
+		right: 200px;
+		font-size: 20px;
+		width: auto;
+	}
+	.section-header {
+		position: relative;
+		left: -22%;
+		font-size: 50px;
+	}
+	.direct-contact-container,
+	.form-wrapper {
+		position: relative;
+		top: 60px;
+		right: 150px;
+		float: none;
+		margin: 0 auto;
+	}
+	.form-control,
+	textarea {
+		position: absolute;
+		left: 5%;
+		max-width: 340px;
+		margin: 0 auto;
+	}
+
+	.name,
+	.email,
+	textarea {
+		width: 280px;
+	}
+	.direct-contact-container {
+		position: relative;
+		top: 215px;
+		margin-top: 60px;
+		max-width: 280px;
+	}
+
+	.social-media-list {
+		left: 60px;
+		height: 15vh;
+	}
+	.social-media-list li {
+		height: 55px;
+		width: 55px;
+		line-height: 55px;
+		font-size: 2rem;
+		background-color: #202122;
+	}
+	.social-media-list li:after {
+		width: 55px;
+		height: 55px;
+		line-height: 55px;
+	}
+	.send-button {
+		position: relative;
+		top: 200px;
+		left: 10%;
+		width: 85%;
+	}
+	.contact-list i {
+		position: relative;
+		left: -30px;
+	}
+	.contact-list span {
+		position: relative;
+		left: 80px;
+	}
+}
+
+/* @media screen and (max-width: 1880px) {
+  .port-container ul li a {
+    position: relative;
+    right: -60px;
+  }
+  .nav hr {
+    position: absolute;
+    top: 270px;
+  }
+
+  .form-control,
+  textarea {
+    position: relative;
+    top: 80px;
+    left: 50px;
+    max-width: 340px;
+    margin: 0 auto;
+  }
+
+  .name,
+  .email,
+  textarea {
+    width: 280px;
+  }
+  .direct-contact-container {
+    position: relative;
+    right: 40px;
+    margin-top: 60px;
+    max-width: 300px;
+  }
+  .send-button {
+    top: 90px;
+    position: relative;
+    left: 50px;
+    width: 85%;
+  }
+} */
